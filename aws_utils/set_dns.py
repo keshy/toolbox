@@ -1,5 +1,4 @@
 import argparse
-from ac_common.core.script_utils import ScriptBase
 import boto
 from exceptions import ValueError
 from boto.route53.record import RECORD_TYPES, ResourceRecordSets
@@ -17,7 +16,7 @@ class Credentials(object):
         self.https = 'True'
 
 
-class Script(ScriptBase):
+class Script():
     """
     Utility script to create or modify the IP mapped to a tenant name associated with a cluster.
     This is required for enabling the dev tenant to be externally visible on the public network
